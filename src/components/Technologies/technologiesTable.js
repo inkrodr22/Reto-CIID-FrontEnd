@@ -110,7 +110,11 @@ const TechnologiesTable = ({ technologies, onDelete, onEditSuccess}) => {
           field="implementationCost" 
           header="Costo de Implementacion" 
           sortable 
-          body={(rowData) => `$${rowData.implementationCost.toLocaleString()}`} 
+          body={(rowData) => 
+            rowData.implementationCost !== undefined 
+                ? `$${rowData.implementationCost.toLocaleString()}` 
+                : 'N/A'
+        }  
         />
         <Column
           field="description"

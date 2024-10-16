@@ -105,7 +105,11 @@ const StartupTable = ({ startups, onDelete, onEditSuccess}) => {
           field="investmentReceived" 
           header="Inversión" 
           sortable 
-          body={(rowData) => `$${rowData.investmentReceived.toLocaleString()}`} 
+          body={(rowData) => 
+            rowData.investmentReceived !== undefined 
+                ? `$${rowData.investmentReceived.toLocaleString()}` 
+                : 'N/A'
+        }  
         />
         <Column
           field="description"
