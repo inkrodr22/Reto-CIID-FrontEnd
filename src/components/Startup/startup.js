@@ -23,7 +23,7 @@ const Startup = () => {
       setStartups(data);
       console.log("Lista de Startups obtenida:", data)
     } catch (error) {
-      console.error("Error al obtener las startups:", error);
+      console.error("Cargando startups...", error);
     }
   };
 

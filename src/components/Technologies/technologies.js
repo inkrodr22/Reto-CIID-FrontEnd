@@ -23,7 +23,7 @@ const Technologies = () => {
       setTechnologies(data);
       console.log("Lista de Tecnologias obtenida:", data)
     } catch (error) {
-      console.error("Error al obtener las tecnologias:", error);
+      console.error("Cargando Tecnologias Emergentes...:", error);
     }
   };
 
