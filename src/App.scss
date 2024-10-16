@@ -2,9 +2,9 @@ html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:Arial, Helvetica, sans-serif; /* Estilo global de tipografía */
-  background-color: #F8F9FA; /* Fondo general */
-  color: #333; /* Color del texto */
+  font-family:Arial, Helvetica, sans-serif;
+  background-color: #F8F9FA;
+  color: #333;
   height: 100%;
   
 }
@@ -12,8 +12,8 @@ html, body {
 
 .flex {
   display: flex;
-  box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
-  overflow-x: hidden; /* Evita el scroll horizontal en todo el contenido */
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -23,13 +23,11 @@ html, body {
 }
 
 
-/* El contenido debe calcular su altura dinámicamente */
 .content {
   flex-grow: 1;
   box-sizing: border-box;
-  height: calc(100vh); /* Resta la altura del navbar de la altura total */
+  height: calc(100vh);
   overflow-y: auto;
-   /* Permite scroll en caso de que el contenido sea muy grande */
 }
 
 footer {
