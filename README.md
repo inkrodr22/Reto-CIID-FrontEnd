@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Reto CIID
 
-## Available Scripts
+> Este proyecto consiste en un conjunto de microservicios diseñados para gestionar startups y tecnologías emergentes. Cada acción CRUD (Crear, Leer, Actualizar, Eliminar) se maneja a través de microservicios independientes, lo que permite una arquitectura modular y escalable.
+Se utiliza un API Gateway como punto central para gestionar las solicitudes, dirigiendo las peticiones a los microservicios correspondientes según la acción solicitada y el tipo de entidad.
 
-In the project directory, you can run:
+## Desarrollado con
 
-### `npm start`
+- Html
+- Css
+- JavaScript
+- React
+- PrimeReact
+- Axios
+- Node.js
+- Express
+- MongoDB
+- Docker
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Aplicacion Desplegada
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+[Despliegue](https://reto-ciid-front-end-inkrodr22s-projects.vercel.app/)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisitos
+La aplicación esta contenerizada, por lo cual es necesario tener instalado [Docker](https://www.docker.com/get-started) para desplegarla. Otras herramientas necesarias seran Node, Npm y un editor de Texto (VsCode).
 
-### `npm run build`
+### Instalación
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clona el repositorio o descarga el codigo
+2. Navega a la carpeta “cliente”.
+3. Construye la imagen Docker:
+```sh
+docker build -t cliente .
+```
+4. Ejecuta el contenedor para iniciar el frontend:
+```sh
+docker run -p 3009:3009 cliente
+```
+Ahora puedes acceder al sitio web en:
+http://localhost:3009/
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+5. Regresa a la carpeta raíz y accede a la carpeta “servidor”
+6. Una vez en la carpeta servidor podrás ejecutar los microservicios del backend:
+7. Puedes ejecutar todos los microservicios y el Gateway mediante Docker con el siguiente comando:
+```sh
+docker-compose up –build
+```
+8. O si lo prefieres, puedes iniciar cada microservicio de manera individual:
+- Api-Gateway (puertp 3000):
+```sh
+docker-compose up --build api-gateway
+```
+- Microservicio CreateStartupService (puerto 3001):
+```sh
+docker-compose up --build create-startup-service
+```
+- Microservicio ReadStartupService (puerto 3002):
+```sh
+docker-compose up --build read-startup-service
+```
+- Microservicio UpdateStartupService (puerto 3003):
+```bash
+docker-compose up --build update-startup-service
+```
+- Microservicio DeleteStartupService (puerto 3004):
+```sh
+docker-compose up --build delete-startup-service
+```
+- Microservicio CreateTechnologyService (puerto 3005):
+```sh
+docker-compose up --build create-technology-service
+```
+- Microservicio ReadTechnologyService (puerto 3006):
+```sh
+docker-compose up --build read-technology-service
+```
+Microservicio UpdateTechnologyService (puerto 3007):
+```sh
+docker-compose up --build update-technology-service
+```
+Microservicio DeleteTechnologyService (puerto 3008):
+```sh
+docker-compose up --build delete-technology-service
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Endpoints
+Las rutas para realizar las diferentes acciones CRUD son:
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Crear Startup (método POST): /api/startups/create
+- Leer Startups (método GET): /api/startups/read
+- Leer UNA Startup (método GET): /api/startups/read/:id
+- Actualizar Startup (método PUT): api/startups/update/:id
+- Eliminar Startup (método DELETE): /api/startups/delete/:id
+- Crear Tecnología (método POST): /api/technologies/create
+- Leer Tecnologías (método GET): /api/technologies/read
+- Leer UNA Tecnología (método GET): /api/technologies/read/:id
+- Actualizar Tecnología (método PUT): api/technologies/update/:id
+- Eliminar Tecnología (método DELETE): /api/technologies/delete/:id
