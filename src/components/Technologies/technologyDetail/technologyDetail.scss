@@ -21,7 +21,8 @@
 .logo-img {
     width: 100px;
     height: auto;
-    margin-right: 15px;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
 .technology-name-container {
@@ -33,6 +34,7 @@
     font-size: 2rem;
     color: #333;
     margin: 0;
+    text-align: left;
 }
 
 .technology-name {
@@ -47,6 +49,7 @@
     padding: 10px 20px;
     font-size: 1rem;
     color: white;
+    margin-right: 20px;
     background-color: #3F51B5;
     border: none;
     border-radius: 5px;
@@ -67,7 +70,7 @@
 }
 
 .technology-info-card {
-    text-align: left;
+    text-align: center;
 }
 
 .technology-description {
