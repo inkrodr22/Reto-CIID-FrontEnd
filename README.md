@@ -88,11 +88,14 @@ docker-compose up --build delete-technology-service
 ## Endpoints
 Las rutas para realizar las diferentes acciones CRUD son:
 
+1. Startups
 - Crear Startup (método POST): /api/startups/create
 - Leer Startups (método GET): /api/startups/read
 - Leer UNA Startup (método GET): /api/startups/read/:id
 - Actualizar Startup (método PUT): api/startups/update/:id
 - Eliminar Startup (método DELETE): /api/startups/delete/:id
+
+2. Tecnologias emergentes
 - Crear Tecnología (método POST): /api/technologies/create
 - Leer Tecnologías (método GET): /api/technologies/read
 - Leer UNA Tecnología (método GET): /api/technologies/read/:id
