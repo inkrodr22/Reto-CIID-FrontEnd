@@ -18,7 +18,7 @@ const DeleteConfirmation = ({ technology, onDelete }) => {
         console.log('Tecnología eliminada:', technology);
         try {
           await onDelete(technology._id);
-          Swal.fire('Eliminado!', 'La startup ha sido eliminada.', 'success');
+          Swal.fire('Eliminado!', 'La tecnologia ha sido eliminada.', 'success');
         } catch (error) {
           Swal.fire('Error!', 'No se pudo eliminar la tecnologia.', 'error');
         }
