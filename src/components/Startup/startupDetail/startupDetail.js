@@ -12,7 +12,7 @@ const StartupDetail = () => {
     useEffect(() => {
         const fetchStartupDetail = async () => {
             try {
-                const response = await axios.get(`http://localhost:3000/api/startups/read/${id}`);
+                const response = await axios.get(`https://api-gateway-sigma.vercel.app/api/startups/read/${id}`);
                 setStartup(response.data);
             } catch (error) {
                 console.error('Error fetching startup details:', error);

@@ -12,7 +12,7 @@ const TechnologyDetail = () => {
     useEffect(() => {
         const fetchTechnologyDetail = async () => {
             try {
-                const response = await axios.get(`http://localhost:3000/api/technologies/read/${id}`);
+                const response = await axios.get(`https://api-gateway-sigma.vercel.app/api/technologies/read/${id}`);
                 setTechnology(response.data);
             } catch (error) {
                 console.error('Error fetching technology details:', error);
