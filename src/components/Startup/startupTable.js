@@ -101,7 +101,12 @@ const StartupTable = ({ startups, onDelete, onEditSuccess}) => {
           sortable
           style={{ minWidth: "10rem" }}
         />
-        <Column field="investmentReceived" header="Inversión" sortable />
+        <Column 
+          field="investmentReceived" 
+          header="Inversión" 
+          sortable 
+          body={(rowData) => `$${rowData.investmentReceived.toLocaleString()}`} 
+        />
         <Column
           field="description"
           header="Descripción"

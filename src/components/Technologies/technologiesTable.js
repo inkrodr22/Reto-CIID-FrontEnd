@@ -106,7 +106,12 @@ const TechnologiesTable = ({ technologies, onDelete, onEditSuccess}) => {
           sortable
           style={{ minWidth: "10rem" }}
         />
-        <Column field="implementationCost" header="Costo de Implementacion" sortable />
+        <Column 
+          field="implementationCost" 
+          header="Costo de Implementacion" 
+          sortable 
+          body={(rowData) => `$${rowData.implementationCost.toLocaleString()}`} 
+        />
         <Column
           field="description"
           header="Descripción"
