@@ -19,11 +19,19 @@ const StartupForm = ({ initialData, onHide, onSuccess }) => {
 
   const categories = useMemo(
     () => [
-      { name: "Software as a Service", code: "saas" },
-      { name: "Tecnología Financiera", code: "fintech" },
-      { name: "Inteligencia Artificial", code: "IA" },
+      { name: "Software as a Service", code: "Software as a Service" },
+      { name: "Tecnología Financiera", code: "Tecnología Financiera" },
+      { name: "Inteligencia Artificial", code: "Inteligencia Artificial" },
       { name: "Ciberseguridad", code: "Ciberseguridad" },
-      { name: "Realidad Virtual", code: "VR" },
+      { name: "Realidad Virtual", code: "Realidad Virtual" },
+      { name: "Energía Renovable", code: "Energía Renovable" },
+      { name: "E-commerce", code: "E-commerce" },     
+      { name: "Educación", code: "Educación" },     
+      { name: "Biotecnología", code: "Biotecnología" },     
+      { name: "Agrotecnología", code: "Agrotecnología" },     
+      { name: "Salud y Bienestar", code: "Salud y Bienestar" },
+      { name: "Big Data", code: "Big Data" },
+      { name: "Automotriz", code: "Automotriz" }
     ],
     []
   );

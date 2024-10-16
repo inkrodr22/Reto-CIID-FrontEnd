@@ -25,6 +25,13 @@ const TechnologiesForm = ({ initialData, onHide, onSuccess }) => {
       { name: "Tecnología de la información", code: "Tecnología de la información" },
       { name: "Entretenimiento", code: "Entretenimiento" },
       { name: "Finanzas", code: "Finanzas" },
+      { name: "Tecnología", code: "Tecnología" },
+      { name: "Manufactura", code: "Manufactura" },
+      { name: "Salud", code: "Salud" },
+      { name: "Seguridad", code: "Seguridad" },
+      { name: "Ciencia de Materiales", code: "Ciencia de Materiales" },
+      { name: "Energía", code: "Energía" },
+
     ],
     []
   );
