@@ -14,6 +14,9 @@ const TechnologyDetail = () => {
             try {
                 const response = await axios.get(`https://api-gateway-sigma.vercel.app/api/technologies/read/${id}`);
                 setTechnology(response.data);
+
+                console.log('ID de la Tecnologia:', id);
+                console.log('Datos de la Tecnologia:', response.data);
             } catch (error) {
                 console.error('Error fetching technology details:', error);
             }

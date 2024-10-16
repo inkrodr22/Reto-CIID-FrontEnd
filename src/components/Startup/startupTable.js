@@ -40,7 +40,6 @@ const StartupTable = ({ startups, onDelete, onEditSuccess}) => {
   };
 
   const handleEditSuccess = (updatedData) => {
-    console.log('Datos actualizados recibidos:', updatedData);
     setStartupList((prevList) =>
       prevList.map((startup) =>
         startup._id === updatedData._id ? updatedData : startup

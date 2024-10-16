@@ -61,17 +61,17 @@ const TechnologiesForm = ({ initialData, onHide, onSuccess }) => {
       if (initialData) {
         const id = initialData._id;
         await updateTechnology(id, formData);
-        console.log("Actualizar la startup:", formData);
+        console.log("Tecnologia actualizada:", formData);
         Swal.fire({
           title: 'Éxito!',
-          text: 'La startup ha sido actualizada correctamente.',
+          text: 'La Tecnologia ha sido actualizada correctamente.',
           icon: 'success',
           confirmButtonText: 'Aceptar'
         });
         onSuccess(formData);
       } else {
         await createTechnology(formData);
-        console.log("Tecnologia creada correctamente");
+        console.log("Tecnologia creada correctamente", formData);
         Swal.fire({
           title: 'Éxito!',
           text: 'La Tecnologia ha sido creada correctamente.',

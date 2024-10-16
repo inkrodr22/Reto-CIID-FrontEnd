@@ -15,6 +15,7 @@ const DeleteConfirmation = ({ startup, onDelete }) => {
       reverseButtons: true
     }).then(async (result) => {
       if (result.isConfirmed) {
+        console.log('Startup eliminada:', startup);
         try {
           await onDelete(startup._id);
           Swal.fire('Eliminado!', 'La startup ha sido eliminada.', 'success');

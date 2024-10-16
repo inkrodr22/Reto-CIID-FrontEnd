@@ -21,6 +21,7 @@ const Startup = () => {
     try {
       const data = await getStartups();
       setStartups(data);
+      console.log("Lista de Startups obtenida:", data)
     } catch (error) {
       console.error("Error al obtener las startups:", error);
     }

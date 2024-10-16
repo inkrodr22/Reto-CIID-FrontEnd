@@ -14,6 +14,9 @@ const StartupDetail = () => {
             try {
                 const response = await axios.get(`https://api-gateway-sigma.vercel.app/api/startups/read/${id}`);
                 setStartup(response.data);
+
+                console.log('ID de la startup:', id);
+                console.log('Datos de la startup:', response.data);
             } catch (error) {
                 console.error('Error fetching startup details:', error);
             }

@@ -58,7 +58,7 @@ const StartupForm = ({ initialData, onHide, onSuccess }) => {
       if (initialData) {
         const id = initialData._id;
         await updateStartup(id, formData);
-        console.log("Actualizar la startup:", formData);
+        console.log("Startup Actualizada:", formData);
         Swal.fire({
           title: 'Éxito!',
           text: 'La startup ha sido actualizada correctamente.',
@@ -68,7 +68,7 @@ const StartupForm = ({ initialData, onHide, onSuccess }) => {
         onSuccess(formData);
       } else {
         await createStartup(formData);
-        console.log("Startup creada correctamente");
+        console.log("Startup creada correctamente", formData);
         Swal.fire({
           title: 'Éxito!',
           text: 'La startup ha sido creada correctamente.',

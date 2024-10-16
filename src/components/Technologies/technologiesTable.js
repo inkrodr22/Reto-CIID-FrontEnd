@@ -39,7 +39,6 @@ const TechnologiesTable = ({ technologies, onDelete, onEditSuccess}) => {
   };
 
   const handleEditSuccess = (updatedData) => {
-    console.log('Datos actualizados recibidos:', updatedData);
     setTechnologiesList((prevList) =>
       prevList.map((technology) =>
         technology._id === updatedData._id ? updatedData : technology

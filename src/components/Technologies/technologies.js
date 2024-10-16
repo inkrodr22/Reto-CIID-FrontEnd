@@ -21,6 +21,7 @@ const Technologies = () => {
     try {
       const data = await getTechnologies();
       setTechnologies(data);
+      console.log("Lista de Tecnologias obtenida:", data)
     } catch (error) {
       console.error("Error al obtener las tecnologias:", error);
     }
