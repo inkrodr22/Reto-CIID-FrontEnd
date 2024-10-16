@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'http://localhost:3000/api',
+    baseURL: 'https://api-gateway-jy5onp2pp-inkrodr22s-projects.vercel.app/api',
     timeout: 1000,
 });
 
