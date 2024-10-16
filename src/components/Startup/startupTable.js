@@ -59,7 +59,7 @@ const StartupTable = ({ startups, onDelete, onEditSuccess}) => {
         paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink CurrentPageReport RowsPerPageDropdown"
         rowsPerPageOptions={[5, 10, 15, 20, 25, 50]}
         dataKey="_id"
-        emptyMessage="No startups encontradas."
+        emptyMessage="Cargando startups..."
         currentPageReportTemplate="Showing {first} to {last} of {totalRecords} startups"
       >
         <Column

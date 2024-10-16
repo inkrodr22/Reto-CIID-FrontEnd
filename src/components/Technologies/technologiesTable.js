@@ -58,7 +58,7 @@ const TechnologiesTable = ({ technologies, onDelete, onEditSuccess}) => {
         paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink CurrentPageReport RowsPerPageDropdown"
         rowsPerPageOptions={[5, 10, 15, 20, 25, 50]}
         dataKey="_id"
-        emptyMessage="No tecnologias encontradas."
+        emptyMessage="Cargando Tecnologias..."
         currentPageReportTemplate="Showing {first} to {last} of {totalRecords} Tecnologías"
       >
         <Column
